@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['free_0',['free',['../structmemory_1_1_linear_allocator.html#ab25b7c1417b8fbdff4a97d1a5a8a7aad',1,'memory::LinearAllocator']]],
-  ['free_5fall_1',['free_all',['../structmemory_1_1_linear_allocator.html#a46a5a7785e2539ea2f63d802ddd013e1',1,'memory::LinearAllocator']]],
-  ['front_2',['front',['../structmemory_1_1_dyn_array.html#a6f9a1e43c20cf5e155812018d3b97a1b',1,'memory::DynArray::front()'],['../structmemory_1_1_dyn_array.html#a6822548825dca41066398b25f99ecaa6',1,'memory::DynArray::front() const']]]
+  ['empty_0',['empty',['../structmemory_1_1_dyn_array.html#a4b7b77f06460fa5895ef5c07ae49960a',1,'memory::DynArray']]],
+  ['emptyarray_1',['EmptyArray',['../namespacememory.html#a97205c6e8e96a41cbfebb29f8532a68ea11546594e03c190fb8e35efb22ba34c1',1,'memory']]],
+  ['end_2',['end',['../structmemory_1_1_dyn_array.html#af845fe4132e547800c5e994149b27d5e',1,'memory::DynArray::end()'],['../structmemory_1_1_dyn_array.html#ac881948f03cf624df3fe662df12e8a28',1,'memory::DynArray::end() const'],['../structmemory_1_1_temp_arena_memory.html#ae6f3694ab8309efec37880717ee7a5a7',1,'memory::TempArenaMemory::end()']]],
+  ['erase_3',['erase',['../structmemory_1_1_dyn_array.html#a03331bbfe594b05aa0921740d6023c03',1,'memory::DynArray']]],
+  ['erase_5frange_4',['erase_range',['../structmemory_1_1_dyn_array.html#a92a791698d3cfa606b361a2afd290b43',1,'memory::DynArray']]],
+  ['error_20handling_20strategy_5',['Error Handling Strategy',['../index.html#autotoc_md8',1,'']]],
+  ['examples_6',['Examples',['../index.html#autotoc_md13',1,'']]]
 ];

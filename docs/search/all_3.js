@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['data_0',['data',['../structmemory_1_1_dyn_array.html#a55cce4021f7b178ddcfc41994480d003',1,'memory::DynArray']]],
-  ['default_5falignment_1',['DEFAULT_ALIGNMENT',['../structmemory_1_1_linear_allocator.html#aba6ff0a51e055f274c3a6dabf4e1f25b',1,'memory::LinearAllocator']]],
-  ['default_5fcapacity_2',['DEFAULT_CAPACITY',['../structmemory_1_1_dyn_array.html#aa050caab38e963252b1aac2b1186fe2b',1,'memory::DynArray']]],
-  ['dynarray_3',['DynArray',['../structmemory_1_1_dyn_array.html',1,'memory::DynArray&lt; T &gt;'],['../structmemory_1_1_dyn_array.html#a42d664660280d73b911f00340560bb71',1,'memory::DynArray::DynArray()'],['../structmemory_1_1_dyn_array.html#a765876847e705671477c4b3c9cc2ec64',1,'memory::DynArray::DynArray(size_t initial_capacity)'],['../structmemory_1_1_dyn_array.html#a75b83a4d7241a7a0bd0de88a41bfe4cb',1,'memory::DynArray::DynArray(std::initializer_list&lt; T &gt; elements)'],['../structmemory_1_1_dyn_array.html#a979f61d2252b26deb128c21feb6d287c',1,'memory::DynArray::DynArray(LinearAllocator *alloc, bool take_ownership=false)'],['../structmemory_1_1_dyn_array.html#aa7f936af1e95d521852db8226008da20',1,'memory::DynArray::DynArray(size_t initial_capacity, LinearAllocator *alloc, bool take_ownership=false)'],['../structmemory_1_1_dyn_array.html#a3cdd096f145efd750943cc2b27b6f2fa',1,'memory::DynArray::DynArray(const DynArray &amp;other)'],['../structmemory_1_1_dyn_array.html#af0dacb66a66fbe9d5caf0eb4e358480b',1,'memory::DynArray::DynArray(DynArray &amp;&amp;other) noexcept']]],
-  ['dynarray_2ehpp_4',['DynArray.hpp',['../_dyn_array_8hpp.html',1,'']]],
-  ['dynarray_2etpp_5',['DynArray.tpp',['../_dyn_array_8tpp.html',1,'']]],
-  ['dynarrayerror_6',['DynArrayError',['../namespacememory.html#a97205c6e8e96a41cbfebb29f8532a68e',1,'memory']]]
+  ['capacity_0',['capacity',['../structmemory_1_1_dyn_array.html#ac1fe2b9d8dcae7e609e2cdd67eccaa36',1,'memory::DynArray']]],
+  ['cbegin_1',['cbegin',['../structmemory_1_1_dyn_array.html#a3c2aaeb00c88c7c8a9282fb1b36f53f4',1,'memory::DynArray']]],
+  ['cend_2',['cend',['../structmemory_1_1_dyn_array.html#a83dc72bdae9ece9fca8006273cd29e7e',1,'memory::DynArray']]],
+  ['clear_3',['clear',['../structmemory_1_1_dyn_array.html#a0a25de9696a0dc574ff75d94d0d2e18e',1,'memory::DynArray']]],
+  ['components_4',['Components',['../index.html#autotoc_md2',1,'']]],
+  ['concepts_5',['Memory Management Concepts',['../index.html#autotoc_md5',1,'']]],
+  ['const_5fiterator_6',['const_iterator',['../structmemory_1_1_dyn_array.html#a85140457608a831e5c32ef2309f1745f',1,'memory::DynArray']]],
+  ['create_7',['create',['../structmemory_1_1_linear_allocator.html#a40fd0117dbc6de342bd073c4c27ec4da',1,'memory::LinearAllocator']]],
+  ['curr_5foffset_8',['curr_offset',['../structmemory_1_1_linear_allocator.html#ac5f6527e6c370034b1fc0eb09107e9c6',1,'memory::LinearAllocator::curr_offset'],['../structmemory_1_1_temp_arena_memory.html#a2dcae6b7106c8efc8969b8f1f85278e1',1,'memory::TempArenaMemory::curr_offset']]],
+  ['custom_20memory_20allocation_9',['Custom Memory Allocation',['../index.html#autotoc_md7',1,'']]]
 ];

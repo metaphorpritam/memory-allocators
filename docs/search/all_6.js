@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['get_5fcapacity_0',['get_capacity',['../structmemory_1_1_dyn_array.html#ad4ef1ebe81ed49e1dea0d465ca66b062',1,'memory::DynArray']]],
-  ['get_5fdata_1',['get_data',['../structmemory_1_1_dyn_array.html#ab8f582b7b9f5d77ad6f687d38fdc9fe3',1,'memory::DynArray::get_data()'],['../structmemory_1_1_dyn_array.html#af683615efc40a76a1b9acbb1395e0816',1,'memory::DynArray::get_data() const']]],
-  ['get_5fsize_2',['get_size',['../structmemory_1_1_dyn_array.html#af34a9acd4d8b3d3db12cb32eb4f4fa55',1,'memory::DynArray']]],
-  ['grow_3',['grow',['../structmemory_1_1_dyn_array.html#a4b84f70f8c542acc1d52ca80d03e4f91',1,'memory::DynArray']]],
-  ['growth_5ffactor_4',['GROWTH_FACTOR',['../structmemory_1_1_dyn_array.html#a38c3faff76a649f98d66ced64a535ea3',1,'memory::DynArray']]]
+  ['free_0',['free',['../structmemory_1_1_linear_allocator.html#ab25b7c1417b8fbdff4a97d1a5a8a7aad',1,'memory::LinearAllocator']]],
+  ['free_5fall_1',['free_all',['../structmemory_1_1_linear_allocator.html#a46a5a7785e2539ea2f63d802ddd013e1',1,'memory::LinearAllocator']]],
+  ['front_2',['front',['../structmemory_1_1_dyn_array.html#a6f9a1e43c20cf5e155812018d3b97a1b',1,'memory::DynArray::front()'],['../structmemory_1_1_dyn_array.html#a6822548825dca41066398b25f99ecaa6',1,'memory::DynArray::front() const']]]
 ];

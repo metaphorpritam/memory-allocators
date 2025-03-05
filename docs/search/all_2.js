@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['capacity_0',['capacity',['../structmemory_1_1_dyn_array.html#ac1fe2b9d8dcae7e609e2cdd67eccaa36',1,'memory::DynArray']]],
-  ['cbegin_1',['cbegin',['../structmemory_1_1_dyn_array.html#a3c2aaeb00c88c7c8a9282fb1b36f53f4',1,'memory::DynArray']]],
-  ['cend_2',['cend',['../structmemory_1_1_dyn_array.html#a83dc72bdae9ece9fca8006273cd29e7e',1,'memory::DynArray']]],
-  ['clear_3',['clear',['../structmemory_1_1_dyn_array.html#a0a25de9696a0dc574ff75d94d0d2e18e',1,'memory::DynArray']]],
-  ['const_5fiterator_4',['const_iterator',['../structmemory_1_1_dyn_array.html#a85140457608a831e5c32ef2309f1745f',1,'memory::DynArray']]],
-  ['create_5',['create',['../structmemory_1_1_linear_allocator.html#a40fd0117dbc6de342bd073c4c27ec4da',1,'memory::LinearAllocator']]],
-  ['curr_5foffset_6',['curr_offset',['../structmemory_1_1_linear_allocator.html#ac5f6527e6c370034b1fc0eb09107e9c6',1,'memory::LinearAllocator::curr_offset'],['../structmemory_1_1_temp_arena_memory.html#a2dcae6b7106c8efc8969b8f1f85278e1',1,'memory::TempArenaMemory::curr_offset']]]
+  ['back_0',['back',['../structmemory_1_1_dyn_array.html#ae5b72ab9fe724d07713779c155d7fbdb',1,'memory::DynArray::back()'],['../structmemory_1_1_dyn_array.html#a83d0e8095c07a24c681f3333f8f93c0b',1,'memory::DynArray::back() const']]],
+  ['begin_1',['begin',['../structmemory_1_1_dyn_array.html#a6dfd0f7bbcdee73e4f54b1b4149174a1',1,'memory::DynArray::begin()'],['../structmemory_1_1_dyn_array.html#ad11da56360b76ca6ac65ab3eefe4893f',1,'memory::DynArray::begin() const'],['../structmemory_1_1_temp_arena_memory.html#aaa7f05f449b368a0542cacabbff0b65a',1,'memory::TempArenaMemory::begin()']]],
+  ['buf_2',['buf',['../structmemory_1_1_linear_allocator.html#ace9907f44a313019fac79a03ef770dda',1,'memory::LinearAllocator']]],
+  ['buf_5flen_3',['buf_len',['../structmemory_1_1_linear_allocator.html#a2bbc10811de6fb3102ca74925b1b6e8b',1,'memory::LinearAllocator']]],
+  ['building_20the_20library_4',['Building the Library',['../index.html#autotoc_md11',1,'']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Linear Allocator: Main Page</title>
+<title>Linear Allocator: Memory Allocators and Data Structures Library</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,10 +96,159 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Linear Allocator Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Memory Allocators and Data Structures Library </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_mainpage"></a></p>
+<p>Welcome to the Memory Allocators and Data Structures library documentation. This library provides efficient memory allocation strategies and data structures implemented in modern C++23.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Overview</h1>
+<p>This library focuses on providing efficient, low-level memory management tools that can be used as building blocks for higher-level data structures and algorithms. It emphasizes:</p>
+<ul>
+<li><b>Performance</b>: Optimized for speed and memory efficiency</li>
+<li><b>Flexibility</b>: Support for custom allocation strategies</li>
+<li><b>Safety</b>: Modern error handling with <code>std::expected</code></li>
+<li><b>Clarity</b>: Clean interfaces with comprehensive documentation</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Components</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Linear Allocator (Arena Allocator)</h2>
+<p>The <code>LinearAllocator</code> is a simple but powerful memory allocator that provides O(1) allocation time complexity. It allocates memory in a linear fashion from a pre-allocated memory buffer.</p>
+<p>Key features:</p>
+<ul>
+<li>Constant-time allocation</li>
+<li>No per-allocation overhead</li>
+<li>Support for memory alignment</li>
+<li>Batch deallocation</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">// Example: Using a LinearAllocator</span></div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> buffer[1024]; <span class="comment">// 1KB buffer</span></div>
+<div class="line"><span class="keyword">auto</span> allocator = <a class="code hl_function" href="structmemory_1_1_linear_allocator.html#a40fd0117dbc6de342bd073c4c27ec4da">memory::LinearAllocator::create</a>(buffer, 1024);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Allocate memory</span></div>
+<div class="line"><span class="keyword">auto</span> result = allocator.alloc(100); <span class="comment">// Allocate 100 bytes</span></div>
+<div class="line"><span class="keywordflow">if</span> (result) {</div>
+<div class="line">    <span class="keywordtype">void</span>* <a class="code hl_namespace" href="namespacememory.html">memory</a> = result.value();</div>
+<div class="line">    <span class="comment">// Use the memory...</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Free all allocations at once</span></div>
+<div class="line">allocator.free_all();</div>
+<div class="ttc" id="anamespacememory_html"><div class="ttname"><a href="namespacememory.html">memory</a></div><div class="ttdef"><b>Definition</b> DynArray.hpp:17</div></div>
+<div class="ttc" id="astructmemory_1_1_linear_allocator_html_a40fd0117dbc6de342bd073c4c27ec4da"><div class="ttname"><a href="structmemory_1_1_linear_allocator.html#a40fd0117dbc6de342bd073c4c27ec4da">memory::LinearAllocator::create</a></div><div class="ttdeci">static LinearAllocator create(void *backing_buffer, size_t backing_buffer_length)</div><div class="ttdoc">Initialize a linear allocator with provided backing buffer.</div><div class="ttdef"><b>Definition</b> LinearAllocator.cpp:6</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+Dynamic Array</h2>
+<p>The <code>DynArray&lt;T&gt;</code> is a template-based dynamic array implementation that provides functionality similar to <code>std::vector</code> but with custom allocator support.</p>
+<p>Key features:</p><ul>
+<li>Automatic resizing</li>
+<li>Integration with custom allocators</li>
+<li>Modern error handling via <code>std::expected</code></li>
+<li>Full implementation of the Rule of 5</li>
+<li>Support for standard container operations</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">// Example: Using DynArray</span></div>
+<div class="line"><a class="code hl_struct" href="structmemory_1_1_dyn_array.html">memory::DynArray&lt;int&gt;</a> numbers;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Add elements</span></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; i++) {</div>
+<div class="line">    numbers.<a class="code hl_function" href="structmemory_1_1_dyn_array.html#ac2b5440936774938b3fda46738d841e3">push_back</a>(i * 10);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Access elements</span></div>
+<div class="line"><span class="keyword">auto</span> front = numbers.<a class="code hl_function" href="structmemory_1_1_dyn_array.html#a6f9a1e43c20cf5e155812018d3b97a1b">front</a>();</div>
+<div class="line"><span class="keywordflow">if</span> (front) {</div>
+<div class="line">    <span class="keywordtype">int</span> value = front.value().get();</div>
+<div class="line">    <span class="comment">// Use the value...</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Iterate through elements</span></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; num : numbers) {</div>
+<div class="line">    <span class="comment">// Process each number...</span></div>
+<div class="line">}</div>
+<div class="ttc" id="astructmemory_1_1_dyn_array_html"><div class="ttname"><a href="structmemory_1_1_dyn_array.html">memory::DynArray</a></div><div class="ttdoc">Dynamic array implementation with custom allocator support.</div><div class="ttdef"><b>Definition</b> DynArray.hpp:39</div></div>
+<div class="ttc" id="astructmemory_1_1_dyn_array_html_a6f9a1e43c20cf5e155812018d3b97a1b"><div class="ttname"><a href="structmemory_1_1_dyn_array.html#a6f9a1e43c20cf5e155812018d3b97a1b">memory::DynArray::front</a></div><div class="ttdeci">std::expected&lt; std::reference_wrapper&lt; T &gt;, DynArrayError &gt; front()</div><div class="ttdoc">Get the first element in the array.</div></div>
+<div class="ttc" id="astructmemory_1_1_dyn_array_html_ac2b5440936774938b3fda46738d841e3"><div class="ttname"><a href="structmemory_1_1_dyn_array.html#ac2b5440936774938b3fda46738d841e3">memory::DynArray::push_back</a></div><div class="ttdeci">std::expected&lt; void, DynArrayError &gt; push_back(const T &amp;value)</div><div class="ttdoc">Add an element to the end of the array.</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Memory Management Concepts</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Memory Alignment</h2>
+<p>Memory alignment ensures that data is stored at memory addresses that are multiples of some value. This is crucial for:</p>
+<ul>
+<li>Optimizing memory access performance</li>
+<li>Meeting hardware requirements for certain data types</li>
+<li>Avoiding unaligned memory access penalties</li>
+</ul>
+<p>This library handles memory alignment requirements automatically, but also provides explicit control when needed.</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Custom Memory Allocation</h2>
+<p>Custom allocators allow you to control how memory is allocated and deallocated. Benefits include:</p>
+<ul>
+<li>Reduced fragmentation</li>
+<li>Improved cache locality</li>
+<li>Better performance for specific workloads</li>
+<li>Fine-grained control over memory usage</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Error Handling Strategy</h1>
+<p>This library uses C++23's <code>std::expected</code> for error handling, providing a more expressive and type-safe alternative to exceptions or error codes. This approach:</p>
+<ul>
+<li>Makes error paths explicit in function signatures</li>
+<li>Avoids exception overhead</li>
+<li>Enforces error handling at compile time</li>
+<li>Preserves value semantics</li>
+</ul>
+<p>For example:</p>
+<div class="fragment"><div class="line"><span class="comment">// Allocating memory with error handling</span></div>
+<div class="line"><span class="keyword">auto</span> result = allocator.alloc(1024);</div>
+<div class="line"><span class="keywordflow">if</span> (result) {</div>
+<div class="line">    <span class="comment">// Success path</span></div>
+<div class="line">    <span class="keywordtype">void</span>* <a class="code hl_namespace" href="namespacememory.html">memory</a> = result.value();</div>
+<div class="line">    <span class="comment">// Use the memory...</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error path</span></div>
+<div class="line">    AllocatorError error = result.error();</div>
+<div class="line">    <span class="comment">// Handle the error...</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+Rule of 5 Implementation</h1>
+<p>The <code>DynArray&lt;T&gt;</code> template implements the Rule of 5 for proper resource management:</p>
+<ol type="1">
+<li><b>Destructor</b>: Ensures proper cleanup of allocated resources</li>
+<li><b>Copy Constructor</b>: Performs deep copying of elements</li>
+<li><b>Move Constructor</b>: Efficiently transfers ownership of resources</li>
+<li><b>Copy Assignment Operator</b>: Combines cleanup and deep copying</li>
+<li><b>Move Assignment Operator</b>: Combines cleanup and ownership transfer</li>
+</ol>
+<p>This ensures that resources are properly managed throughout the lifetime of objects.</p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Getting Started</h1>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Building the Library</h2>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake -G Ninja ..</div>
+<div class="line">cmake --build .</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md12"></a>
+Using the Library in Your Project</h2>
+<p>Add the include directory to your include path and link against the memory library:</p>
+<div class="fragment"><div class="line">target_include_directories(your_project PRIVATE /path/to/memory/include)</div>
+<div class="line">target_link_libraries(your_project PRIVATE memory)</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md13"></a>
+Examples</h1>
+<p>See the <code>examples</code> directory for complete working examples:</p>
+<ul>
+<li><code>LinearAllocatorExample.cpp</code> - Demonstrates LinearAllocator usage</li>
+<li><code>DynArrayExample.cpp</code> - Demonstrates DynArray usage</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md14"></a>
+License</h1>
+<p>This library is available under the <code>do-what-you-want</code> License. See the LICENSE file for details.</p>
+<h1><a class="anchor" id="autotoc_md15"></a>
+Author</h1>
+<p>Pritam Sarkar </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

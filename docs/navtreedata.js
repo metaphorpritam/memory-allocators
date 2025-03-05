@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Linear Allocator", "index.html", [
+    [ "Memory Allocators and Data Structures Library", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
