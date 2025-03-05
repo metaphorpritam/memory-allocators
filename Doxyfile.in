@@ -4,10 +4,14 @@ PROJECT_BRIEF          = @DOXYGEN_PROJECT_BRIEF@
 
 OUTPUT_DIRECTORY       = @DOXYGEN_OUTPUT_DIRECTORY@
 
-INPUT                  = @INCLUDE_DIR@ @SOURCE_DIR@
-FILE_PATTERNS          = *.hpp *.cpp *.h *.c *.tpp
+# Add mainpage.md to the INPUT
+INPUT                  = @INCLUDE_DIR@ @SOURCE_DIR@ @CMAKE_CURRENT_SOURCE_DIR@/mainpage.md
+FILE_PATTERNS          = *.hpp *.cpp *.h *.c *.tpp *.md
 RECURSIVE              = @DOXYGEN_RECURSIVE@
 EXCLUDE                = @EXAMPLES_DIR@
+
+# Use mainpage.md as the main page
+USE_MDFILE_AS_MAINPAGE = @CMAKE_CURRENT_SOURCE_DIR@/mainpage.md
 
 EXTRACT_ALL            = @DOXYGEN_EXTRACT_ALL@
 EXTRACT_PRIVATE        = @DOXYGEN_EXTRACT_PRIVATE@
