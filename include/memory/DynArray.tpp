@@ -4,27 +4,30 @@
 
 namespace memory {
 
-// Default constructor
+
 template <typename T>
 DynArray<T>::DynArray()
     : data(nullptr), size(0), capacity(0), allocator(nullptr), owns_allocator(false) {
+    // Default constructor
     auto result = reserve(DEFAULT_CAPACITY);
     // In a default constructor, we can't really report errors, so we assert
     assert(result.has_value() && "Failed to allocate initial capacity");
 }
 
-// Constructor with initial capacity
+
 template <typename T>
 DynArray<T>::DynArray(size_t initial_capacity)
     : data(nullptr), size(0), capacity(0), allocator(nullptr), owns_allocator(false) {
+    // Constructor with initial capacity
     auto result = reserve(initial_capacity);
     assert(result.has_value() && "Failed to allocate initial capacity");
 }
 
-// Constructor with initializer list
+
 template <typename T>
 DynArray<T>::DynArray(std::initializer_list<T> elements)
     : data(nullptr), size(0), capacity(0), allocator(nullptr), owns_allocator(false) {
+    // Constructor with initializer list
     auto result = reserve(elements.size());
     if (result.has_value()) {
         for (const auto& element : elements) {
@@ -36,25 +39,28 @@ DynArray<T>::DynArray(std::initializer_list<T> elements)
     }
 }
 
-// Constructor with custom allocator
+
 template <typename T>
 DynArray<T>::DynArray(LinearAllocator* alloc, bool take_ownership)
     : data(nullptr), size(0), capacity(0), allocator(alloc), owns_allocator(take_ownership) {
+    // Constructor with custom allocator
     auto result = reserve(DEFAULT_CAPACITY);
     assert(result.has_value() && "Failed to allocate initial capacity with custom allocator");
 }
 
-// Constructor with initial capacity and custom allocator
+
 template <typename T>
 DynArray<T>::DynArray(size_t initial_capacity, LinearAllocator* alloc, bool take_ownership)
     : data(nullptr), size(0), capacity(0), allocator(alloc), owns_allocator(take_ownership) {
+    // Constructor with initial capacity and custom allocator
     auto result = reserve(initial_capacity);
     assert(result.has_value() && "Failed to allocate initial capacity with custom allocator");
 }
 
-// Destructor - Rule of 5 #1
+
 template <typename T>
 DynArray<T>::~DynArray() {
+    // Destructor - Rule of 5 #1
     // Destroy all elements
     for (size_t i = 0; i < size; ++i) {
         data[i].~T();
@@ -75,10 +81,11 @@ DynArray<T>::~DynArray() {
     owns_allocator = false;
 }
 
-// Copy constructor - Rule of 5 #2
+
 template <typename T>
 DynArray<T>::DynArray(const DynArray& other)
     : data(nullptr), size(0), capacity(0), allocator(nullptr), owns_allocator(false) {
+    // Copy constructor - Rule of 5 #2
     // Reserve capacity for the elements
     auto result = reserve(other.capacity);
     if (result.has_value()) {
@@ -92,11 +99,12 @@ DynArray<T>::DynArray(const DynArray& other)
     }
 }
 
-// Move constructor - Rule of 5 #3
+
 template <typename T>
 DynArray<T>::DynArray(DynArray&& other) noexcept
     : data(other.data), size(other.size), capacity(other.capacity),
       allocator(other.allocator), owns_allocator(other.owns_allocator) {
+    // Move constructor - Rule of 5 #3
     // Reset the source object
     other.data = nullptr;
     other.size = 0;
@@ -105,9 +113,10 @@ DynArray<T>::DynArray(DynArray&& other) noexcept
     other.owns_allocator = false;
 }
 
-// Copy assignment operator - Rule of 5 #4
+
 template <typename T>
 DynArray<T>& DynArray<T>::operator=(const DynArray& other) {
+    // Copy assignment operator - Rule of 5 #4
     if (this != &other) {
         // Clear existing data
         clear();
@@ -127,9 +136,10 @@ DynArray<T>& DynArray<T>::operator=(const DynArray& other) {
     return *this;
 }
 
-// Move assignment operator - Rule of 5 #5
+
 template <typename T>
 DynArray<T>& DynArray<T>::operator=(DynArray&& other) noexcept {
+    // Move assignment operator - Rule of 5 #5
     if (this != &other) {
         // Clean up existing resources
         clear();
@@ -156,9 +166,10 @@ DynArray<T>& DynArray<T>::operator=(DynArray&& other) noexcept {
     return *this;
 }
 
-// Subscript operator
+
 template <typename T>
 T& DynArray<T>::operator[](size_t index) {
+    // Subscript operator
     if (index >= size) {
         throw std::out_of_range("DynArray index out of range");
     }
