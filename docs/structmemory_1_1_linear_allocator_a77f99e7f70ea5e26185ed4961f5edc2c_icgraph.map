@@ -1,0 +1,5 @@
+<map id="memory::LinearAllocator::alloc" name="memory::LinearAllocator::alloc">
+<area shape="rect" id="Node000001" title="Allocate memory with default alignment." alt="" coords="216,5,378,48"/>
+<area shape="rect" id="Node000002" href="$structmemory_1_1_linear_allocator.html#a664258ba91ee24095f7b988abb2b5f1e" title="Allocate memory for a specific type with default alignment." alt="" coords="5,5,168,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,29,168,29,168,24,200,24"/>
+</map>

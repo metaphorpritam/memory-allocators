@@ -1,0 +1,5 @@
+<map id="memory::LinearAllocator::align_forward" name="memory::LinearAllocator::align_forward">
+<area shape="rect" id="Node000001" title="Align a memory address forward to the specified alignment." alt="" coords="5,5,168,48"/>
+<area shape="rect" id="Node000002" href="$structmemory_1_1_linear_allocator.html#a81c611e8217e9c10505d172354c4e179" title="Check if a value is a power of two." alt="" coords="216,5,378,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,24,200,24,200,29,168,29"/>
+</map>

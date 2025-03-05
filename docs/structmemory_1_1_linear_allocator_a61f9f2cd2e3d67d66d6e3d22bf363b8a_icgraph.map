@@ -1,0 +1,11 @@
+<map id="memory::LinearAllocator::alloc_align" name="memory::LinearAllocator::alloc_align">
+<area shape="rect" id="Node000001" title="Allocate memory with alignment." alt="" coords="426,39,588,81"/>
+<area shape="rect" id="Node000002" href="$structmemory_1_1_linear_allocator.html#a77f99e7f70ea5e26185ed4961f5edc2c" title="Allocate memory with default alignment." alt="" coords="216,5,378,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="410,47,378,42,379,37,411,42"/>
+<area shape="rect" id="Node000004" href="$structmemory_1_1_linear_allocator.html#a0a256fd4cfa9d3176e8411514a904584" title="Resize an existing allocation with alignment." alt="" coords="216,72,378,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="411,78,379,83,378,78,410,73"/>
+<area shape="rect" id="Node000003" href="$structmemory_1_1_linear_allocator.html#a664258ba91ee24095f7b988abb2b5f1e" title="Allocate memory for a specific type with default alignment." alt="" coords="5,5,168,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="200,29,168,29,168,24,200,24"/>
+<area shape="rect" id="Node000005" href="$structmemory_1_1_linear_allocator.html#abb9adc8844af9458d03e7d8233cb379e" title="Resize an existing allocation with default alignment." alt="" coords="5,72,168,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="200,96,168,96,168,91,200,91"/>
+</map>

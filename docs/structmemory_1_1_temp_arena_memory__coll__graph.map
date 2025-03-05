@@ -1,0 +1,5 @@
+<map id="memory::TempArenaMemory" name="memory::TempArenaMemory">
+<area shape="rect" id="Node000001" title="Temporary arena memory scope for short&#45;lived allocations." alt="" coords="5,416,184,528"/>
+<area shape="rect" id="Node000002" href="$structmemory_1_1_linear_allocator.html" title="Linear (Arena) allocator implementation." alt="" coords="11,5,179,352"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,352,97,399,92,399,92,352"/>
+</map>

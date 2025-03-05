@@ -1,0 +1,10 @@
+<map id="memory::LinearAllocator::resize_align" name="memory::LinearAllocator::resize_align">
+<area shape="rect" id="Node000001" title="Resize an existing allocation with alignment." alt="" coords="5,35,168,77"/>
+<area shape="rect" id="Node000002" href="$structmemory_1_1_linear_allocator.html#a61f9f2cd2e3d67d66d6e3d22bf363b8a" title="Allocate memory with alignment." alt="" coords="216,5,378,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,42,200,38,200,43,168,47"/>
+<area shape="rect" id="Node000004" href="$structmemory_1_1_linear_allocator.html#a81c611e8217e9c10505d172354c4e179" title="Check if a value is a power of two." alt="" coords="636,35,799,77"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="168,56,216,57,588,57,620,57,621,62,588,63,216,63,168,62"/>
+<area shape="rect" id="Node000003" href="$structmemory_1_1_linear_allocator.html#a3ce93f925bd3be6838579eebc13d4425" title="Align a memory address forward to the specified alignment." alt="" coords="426,5,588,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="378,24,410,24,410,29,378,29"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="589,35,621,40,620,45,588,41"/>
+</map>

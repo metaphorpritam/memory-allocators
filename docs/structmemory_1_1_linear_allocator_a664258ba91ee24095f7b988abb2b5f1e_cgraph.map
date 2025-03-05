@@ -1,0 +1,11 @@
+<map id="memory::LinearAllocator::alloc" name="memory::LinearAllocator::alloc">
+<area shape="rect" id="Node000001" title="Allocate memory for a specific type with default alignment." alt="" coords="5,5,168,48"/>
+<area shape="rect" id="Node000002" href="$structmemory_1_1_linear_allocator.html#a77f99e7f70ea5e26185ed4961f5edc2c" title="Allocate memory with default alignment." alt="" coords="216,5,378,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,24,200,24,200,29,168,29"/>
+<area shape="rect" id="Node000003" href="$structmemory_1_1_linear_allocator.html#a61f9f2cd2e3d67d66d6e3d22bf363b8a" title="Allocate memory with alignment." alt="" coords="426,5,588,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="378,24,410,24,410,29,378,29"/>
+<area shape="rect" id="Node000004" href="$structmemory_1_1_linear_allocator.html#a3ce93f925bd3be6838579eebc13d4425" title="Align a memory address forward to the specified alignment." alt="" coords="636,5,799,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="589,24,621,24,621,29,589,29"/>
+<area shape="rect" id="Node000005" href="$structmemory_1_1_linear_allocator.html#a81c611e8217e9c10505d172354c4e179" title="Check if a value is a power of two." alt="" coords="847,5,1009,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="799,24,831,24,831,29,799,29"/>
+</map>
